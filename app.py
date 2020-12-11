@@ -160,7 +160,7 @@ def delete(path):
                 os.rmdir(fullpath)
                 return flask.make_response('', 204)
             else:
-                print os.listdir(fullpath)
+                print(os.listdir(fullpath))
                 return flask.make_response('/%s: Directory is not empty.' % path, 403)
         else:
             os.remove(fullpath)
